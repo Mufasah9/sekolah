@@ -33,20 +33,6 @@ class Nilai extends BaseController
         echo view('admin/layout/wrapper', $data);
     }
 
-    public function action()
-    {
-        if ($this->request->getVar('action')) {
-            $action = $this->request->getVar('action');
-
-            if ($action == 'get_siswa') {
-                $SiswaModel = new SiswaModel();
-
-                $SiswaData = $SiswaModel->get_datasiswa($this->request->getVar('id_jurusan'), $this->request->getVar('id_tahun'));
-
-                echo json_encode($SiswaData);
-            }
-        }
-    }
 
 
 

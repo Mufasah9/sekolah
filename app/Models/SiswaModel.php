@@ -20,11 +20,6 @@ class SiswaModel extends Model
         return $this->db->table('siswa')->get()->getResultArray();
     }
 
-    public function get_datasiswa($id, $id2)
-    {
-        return $this->db->table($this->table)->where(['id_jurusan' => $id])->where(['id_tahun' => $id2])->get()->getResultArray();
-    }
-
     public function insert_siswa($data)
     {
         return $this->db->table('siswa')->insert($data);
